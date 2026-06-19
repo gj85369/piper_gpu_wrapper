@@ -26,7 +26,9 @@ def parse_pdb2fasta(pdb2fasta_results):
     chdic = {}
     for i in range(0,len(lns)):
         if lns[i][0] == '>':
-            chain_name = lns[i].split(':')[1].strip()
+            pts = lns[i].split()
+            chpt = [x for x in pts if ':' in x][0]
+            chain_name = chpt.split(':')[1].strip()
             fast_seq = lns[i+1].strip()
             chdic[chain_name] = fast_seq
     return chdic
