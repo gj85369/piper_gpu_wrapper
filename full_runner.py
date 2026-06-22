@@ -103,6 +103,7 @@ class main_runner:
         print('scoring setup')
         
         set_score = setup_scoring(self.argsin.output, self.argsin.ligand, self.argsin.receptor)
+        set_score.runner()
         self.argsin.ligand_a3ms = set_score.lig_res
         self.argsin.receptor_a3ms = set_score.rec_res
         
