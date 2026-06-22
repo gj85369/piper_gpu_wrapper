@@ -57,7 +57,7 @@ class complex_scoring_runner:
         
         
         
-    def main(self):
+    def runner(self):
         cfiles = glob(f'{self.argsin.complex_dir}/*.pdb')
         pyinst = [sys.executable]
         self.make_command()

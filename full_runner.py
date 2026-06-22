@@ -13,7 +13,7 @@ from pathlib import Path
 from piper_runner_class import piper_runner_class
 from scoring_setup import setup_scoring
 from pdb_2_fasta import pdb2fasta_runner
-
+from complex_scoring_runner import complex_scoring_runner
 bpath = Path(__file__).parent.resolve()
 
     
@@ -110,8 +110,9 @@ class main_runner:
         
         
         print('scoring run')
-        self.argsin.complex_dir = Path(pip_run.mod_count[0])
-        print(Path(pip_run.mod_count[0]))
+        self.argsin.complex_dir = str(Path(pip_run.mod_count[0]).parent)
+        complex_run = complex_scoring_runner(self.argsin)
+        complex_run.runner()
         
         
         
