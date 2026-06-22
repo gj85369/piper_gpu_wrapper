@@ -41,10 +41,10 @@ class complex_scoring_runner:
     
     def make_command(self):
         cmd = [self.argsin.gpu_runner_location]
-        for inst in self.argsin.rec_res:
+        for inst in self.argsin.receptor_a3ms:
             cmd.append('-r')
             cmd.append(inst)
-        for inst in self.argsin.lig_res:
+        for inst in self.argsin.ligand_a3ms:
             cmd.append('-l')
             cmd.append(inst)            
         cmd.append('-c')
