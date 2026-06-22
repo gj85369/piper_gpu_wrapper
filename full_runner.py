@@ -110,6 +110,7 @@ class main_runner:
         
         print('scoring run')
         self.argsin.complex_dir = Path(pip_run.mod_count[0])
+        print(Path(pip_run.mod_count[0]))
         
         
         

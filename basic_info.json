@@ -1,3 +1,5 @@
 {
-    "piper_location": "/root/distrib/piperaf/piper-1.2.0c9/piper_package/python_bin/run_piper"
+    "piper_location": "/root/distrib/piperaf/piper-1.2.0c9/piper_package/python_bin/run_piper",
+    "gpu_runner_location" : "/workspace/alphafold/frun/complete_run.py"
 }
+

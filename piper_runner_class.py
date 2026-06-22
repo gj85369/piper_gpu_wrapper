@@ -26,8 +26,8 @@ class piper_runner_class:
     
     
     def check_outs(self):
-        recname = self.argsin.receptor.split('/')[-1].split('.pdb')[0]
-        ligname = self.argsin.ligand.split('/')[-1].split('.pdb')[0]
+        recname = str(self.argsin.receptor).split('/')[-1].split('.pdb')[0]
+        ligname = str(self.argsin.ligand).split('/')[-1].split('.pdb')[0]
         
         self.mod_count = glob(f'{self.argsin.odirfull}/piper_outs/{recname}_{ligname}.antibody/model*.pdb')
         if len(self.mod_count) > 0:
