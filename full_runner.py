@@ -209,4 +209,5 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     parse_inputs(args)
-    main(args)
+    ok = main_runner(args)
+    ok.runner()
