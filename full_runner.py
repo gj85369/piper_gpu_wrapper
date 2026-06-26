@@ -186,28 +186,14 @@ if __name__ == '__main__':
     
     agroup = parser.add_argument_group('advanced', '''These are advanced options please dont touch unless you know what you are doing
                               also please dont use these and the advanced json option''')    
-    # agroup.add_argument("--fft_cell_spacing",
-    #                     help="Dont touch unless you know what you are doing",
-    #                     type=float)    
-    # agroup.add_argument("--fft_mask_radius",
-    #                     help="Dont touch unless you know what you are doing",
-    #                     type=float)   
-    # agroup.add_argument("--fft_num_eigens",
-    #                     help="Dont touch unless you know what you are doing",
-    #                     type=float)   
-    # agroup.add_argument("--max_models",
-    #                     help="Dont touch unless you know what you are doing",
-    #                     type=int)   
     agroup.add_argument("--radius_for_clustering",
                         help="Dont touch unless you know what you are doing",
                         default=3.0,
                         type=float)     
     agroup.add_argument("--translations_for_clustering",
                         help="Dont touch unless you know what you are doing",
-                        default=4000,
+                        default=5000,
                         type=int)       
-    # agroup.add_argument("--mask_repulse",
-    #                     help="Dont touch unless you know what you are doing")
     
     args = parser.parse_args()
     parse_inputs(args)
